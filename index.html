@@ -29,13 +29,13 @@ app.controller("myCtrl", function($scope) {
         } else {
             $scope.errortext = "This item is already in your Todo List.";
         }
+        localStorage.setItem("products", JSON.stringify($scope.products));
     }
     $scope.removeItem = function (x) {   
         $scope.products.splice(x, 1);
     }
 });
 
-localStorage.setItem("products", JSON.stringify($scope.products));
 </script>
 </body>
 </html>
